@@ -1,0 +1,498 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nanum Gothic Coding', monospace;
+    line-height: 1.6;
+    color: black;
+    background-color: bisque;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    border: black solid 2px;
+    background-color: rgba(240, 229, 34, 0.664)
+}
+
+.flexHeader {
+    width: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.headerMenu {
+    margin-right: 1em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+header nav ul li {
+    margin: 0 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Baloo 2', cursive;
+    color: #6619FF;
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.logo {
+    vertical-align: middle; /* Éste comando lo encontré (después de 19 videos de YT) a lo último y me logró centrar, verticalmente, el logo */
+    border-radius: 35%;
+    width: 150px;
+    height: 120px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;   
+}
+
+.gridHome {
+    display: grid;
+    grid-template-areas: 
+    "imgHome imgHome imgHome"
+    "tituloHome tituloHome tituloHome"
+    "subtituloPsico subtituloPsico ."
+    "textoHome textoHome textoHome"
+    "ubicacionCetecc ubicacionCetecc ."
+    "mapaCetecc . .";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, auto);
+    justify-items: strecht;
+    align-items: center;
+}
+
+.imgHome {
+    grid-area: imgHome;
+    align-self: center;
+}
+
+.tituloHome {
+    grid-area: tituloHome;
+}
+
+.subtituloPsico {
+    grid-area: subtituloPsico;
+    margin-left: 1.5%;
+}
+
+.textoHome {
+    grid-area: textoHome;
+    margin-left: 1.5%;
+}
+
+.ubicacionCetecc {
+    grid-area: ubicacionCetecc;
+    margin: 15px 0.5%;
+}
+
+.ubicacionCetecc h3 {
+    margin: 5px 0 0 15px;
+    align-self: flex-end;
+}
+
+.mapaCetecc {
+    grid-area: mapaCetecc;
+}
+
+.mapaCetecc iframe {
+    margin-left: 3.5%;
+    margin-bottom: 3.5%;
+}
+
+.gridNosotros {
+    display: grid;
+    grid-template-areas:
+    "tituloNosotros tituloNosotros tituloNosotros"
+    "fotoAna sobreAna sobreAna"
+    "fotoCarla sobreCarla sobreCarla"
+    "fotoMathias sobreMathias sobreMathias";
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
+    justify-items: center;
+    align-items: center;
+}
+
+.tituloNosotros {
+    grid-area: tituloNosotros;
+}
+
+.fotoAna {
+    grid-area: fotoAna;
+    height: auto;
+    padding-top: 4%;
+}
+
+.sobreAna {
+    grid-area: sobreAna;
+    padding: 0 1%;
+}
+
+.fotoCarla {
+    grid-area: fotoCarla;
+    height: auto;
+    padding-top: 4%;
+}
+
+.sobreCarla {
+    grid-area: sobreCarla;
+    padding: 0 1%;
+}
+
+.fotoMathias {
+    grid-area: fotoMathias;
+    height: auto;
+    padding-top: 4%;
+    padding-left: 2%;
+}
+
+.sobreMathias {
+    grid-area: sobreMathias;
+    padding: 0 1%;
+}
+
+.gridMision {
+    display: grid;
+    grid: "objetivosCetecc objetivosCetecc objetivosCetecc" auto
+    "vision . ." auto
+    "textoVision textoVision textoVision" auto
+    "mision . ." auto
+    "textoMision textoMision textoMision" auto
+    "valores . ." auto
+    "textoValores textoValores textoValores" 1fr / 1fr 1fr 1fr;
+}
+
+.objetivosCetecc {
+    margin-bottom: 15px;
+    text-align: center;
+    grid-area: objetivosCetecc;
+}
+
+.vision {
+    margin: 15px 0 10px 15px;
+    grid-area: vision;
+}
+
+.textoVision {
+    grid-area: textoVision;
+    padding: 0 1.25%;
+}
+
+.mision {
+    margin: 15px 0 10px 15px;
+    grid-area: mision;
+}
+
+.textoMision {
+    grid-area: textoMision;
+    padding: 0 1.25%;
+}
+
+.valores {
+    margin: 15px 0 10px 15px;
+    grid-area: valores;
+}
+
+.textoValores {
+    grid-area: textoValores;
+    padding: 0 1.25% 1.25% 1.25%;
+}
+
+.gridContacto {
+    width: 100%;
+    display: grid;
+    grid: "tituloContacto tituloContacto tituloContacto tituloContacto" auto
+    ". formularioContacto formularioContacto ." auto / 1fr auto auto 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.tituloContacto {
+    grid-area: tituloContacto;
+}
+
+.formularioContacto {
+    grid-area: formularioContacto;
+    padding: 3% 3%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgb(201, 214, 184);
+}
+
+.consultaContacto {
+    padding-left: 12%;
+    padding-top: 3%;
+}
+
+.resetSubmitContacto {
+    padding-left: 18%;
+}
+
+.gridServicios {
+    display: grid;
+    grid: "tituloServicios tituloServicios tituloServicios tituloServicios tituloServicios" auto
+    "listadoServicios listadoServicios listadoServicios . ." auto
+    ". horariosServicios horariosServicios horariosServicios ." auto / 1fr 1fr 1fr 1fr 1fr;
+    /* justify-items: center; */
+}
+
+.tituloServicios {
+    grid-area: tituloServicios;
+    margin-bottom: 2.5%;
+}
+
+.listadoServicios {
+    grid-area: listadoServicios;
+    /* padding-left: 5%; */
+    justify-self: center;
+}
+
+.horariosServicios {
+    grid-area: horariosServicios;
+    justify-self:center;
+    margin: 20px 0 15px 15px;
+}
+
+  .listadoServicios ul li {
+    list-style-type: none;
+}
+
+.tabla th{
+    text-align: center;
+    padding: 2px 5px;
+}
+
+.tabla td{
+    text-align: left;
+    padding-left: 10px;
+}
+
+.footer {     
+    border: black solid 2px;
+    background-color: rgba(240, 229, 34, 0.664)
+}
+
+.footer p {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.footer ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer ul li {
+    list-style-type: none;
+}
+
+.footerFlex {
+    /* margin-top: 50px; */
+    display: flex;
+    flex-wrap: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footerIconos img {
+    height: 60px;
+    width: 65px;
+}
+
+/*  MEDIA QUERIES  */
+
+@media screen and (max-width: 708px) {
+    .logo {
+        width: 100px;
+        height: 90px;
+    }
+    
+    .headerMenu {
+        flex-wrap: nowrap;
+    }
+        
+    .gridServicios {
+    display: grid;
+    grid: "tituloServicios tituloServicios tituloServicios" auto
+    "listadoServicios listadoServicios listadoServicios" auto
+    "horariosServicios horariosServicios horariosServicios" auto / 1fr 1fr 1fr;
+    }
+
+    body {
+        font-size: .80rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+        line-height: 1;
+        margin-bottom: 15px;
+    }
+    
+    h3 {
+        font-size: 1.7rem;
+        line-height: 1;
+    }
+    
+    .sobreMathias {
+        padding: 0 2%;
+    }
+
+    .vision {
+        text-align: center;
+    }    
+
+    .mision {
+        text-align: center;
+    }
+    
+    .valores {
+        text-align: center;
+    }
+    
+    .footerFlex {
+        /* margin-top: 50px; */
+        /* display: flex; */
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .footer p {
+        color: blue;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .gridHome {
+        display: grid;
+        grid-template-areas: 
+        "imgHome"
+        "tituloHome"
+        "subtituloPsico"
+        "textoHome"
+        "ubicacionCetecc"
+        "mapaCetecc";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+        justify-items: strecht;
+        align-items: center;
+    }
+
+    .ubicacionCetecc {
+        grid-area: ubicacionCetecc;
+        margin: 15px 0.5%;
+    }
+    
+    .ubicacionCetecc h3 {
+        /* margin-left: 1.5%; */
+        /* align-self: flex-end; */
+        text-align: center;
+    }
+    
+    .mapaCetecc {
+        grid-area: mapaCetecc;
+    }
+    
+    .mapaCetecc iframe {
+        margin-left: 7%;
+        margin-bottom: 3.5%;
+    }
+
+    .gridNosotros {
+        /* display: grid; */
+        grid-template-areas:
+        "tituloNosotros"
+        "fotoAna"
+        "sobreAna"
+        "fotoCarla"
+        "sobreCarla"
+        "fotoMathias"
+        "sobreMathias";
+        justify-items: center;
+        align-items: center;
+    }
+
+    .sobreAna {
+        text-align: justify;
+    }
+
+    .sobreCarla {
+        text-align: justify;
+    }
+
+    .sobreMathias {
+        text-align: justify;
+        padding-left: 1%;
+    }
+
+    .gridMision {
+        grid: "objetivosCetecc" auto
+        "vision" auto
+        "textoVision" auto
+        "mision" auto
+        "textoMision" auto
+        "valores" auto
+        "textoValores" auto / 1fr ;
+    }
+
+    .listadoServicios{
+        border: dotted 1px blue;
+    }
+
+
+    .tabla {
+        border: solid 1px blue;
+    }
+
+    .listadoServicios ul li {
+        list-style-type: circle;
+    }
+
+    .formularioContacto {
+        background-color: yellowgreen;
+    }
+
+    .footerIconos img {
+        height: 45px;
+        width: 48.5px;
+    }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/perfil-01.jpg">
+    <title> CETECC | Contacto </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Nanum+Gothic+Coding&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+<body>
+    <header class="flexHeader">
+        <a href="../index.html"> <img class="logo" src="../images/perfil-01.jpg"
+                alt="logo del insituto en tamaño pequeño" width="100" height="100"></a>
+
+        <nav>
+            <ul class="headerMenu">
+                <li><a href="../index.html"> Home </a></li>
+                <li><a href="./nosotros.html"> Quiénes somos </a></li>
+                <li><a href="./mision.html"> Visión, Misión y Valores </a></li>
+                <li><a href="./servicios.html"> Servicios </a></li>
+                <li><a href="./contacto.html"> Contacto </a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section class="gridContacto">
+        
+        <div class="tituloContacto">
+            <h1> Formulario de Contacto </h1>
+        </div>
+        
+        <form class="formularioContacto" method="post">
+            
+            <div class="nombreApellido">
+                <label for="nombre"> Nombre y Apellido: </label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Juan Perez">
+            </div>
+     
+            <div class="correoElectronico">    
+                <label for="email"> Correo electrónico: </label>
+                <input type="email" id="correo" name="correo" required placeholder="XXXXXX@xxxx.com">
+            </div>    
+                
+            
+            <div class="telContacto">
+                <label for="celular"> Celular: </label>
+                <input type="tel" id="celular" name="celular" required placeholder="Sin 0 y sin 15">
+            </div>
+            
+            <div class="genero">
+                <p> Sexo: </p>
+                    <label for="sexo"> Mujer </label>
+                    <input type="radio" name="sexo" id="sexo" value="mujer" checked>
+                    <label for="sexo"> Hombre </label>
+                    <input type="radio" name="sexo" id="sexo" value="hombre">
+                    <label for="sexo"> No Binario </label>
+                    <input type="radio" name="sexo" id="sexo" value="no binario">
+            </div>
+            
+            
+            <div class="edad"> 
+                <label for="edad"> Edad: </label>
+                <input type="number" name="edad" id="edad" placeholder="Indique su edad">
+            </div>
+                
+            <!-- <label for="consulta"> Consulta: </label> -->
+            
+            <div class="consultaContacto">
+                <textarea name="consulta" id="consulta" cols="30" rows="10" placeholder="Escriba su consulta..." required></textarea>
+            </div>
+            
+            <div class="condicionesContacto">
+                <input type="checkbox" name="condiciones" id="condiciones" value="1" checked required>
+                <label for="condiciones"> Acepto las condiciones para que me contacten. </label>
+            </div>
+            
+            <div class="resetSubmitContacto">
+                <input type="reset" value="Borrar formulario">
+                <input type="submit" value="Enviar consulta">
+            </div>
+        
+        </form>
+    
+    </section>
+
+    <footer class="footer">
+        <div class="footerFlex">
+            <nav>
+                <ul>
+                    <li><a href="../index.html"> Inicio </a></li>
+                    <li><a href="./nosotros.html"> Quiénes somos </a></li>
+                    <li><a href="./mision.html"> Visión, Misión y Valores </a></li>
+                    <li><a href="./servicios.html"> Servicios </a></li>
+                    <li><a href="./contacto.html"> Contacto </a></li>
+                </ul>
+            </nav>
+
+            <div>
+                <p> Cetecc ® - Todos los derechos reservados </p>
+            </div>
+
+            <div class="footerIconos">
+                <a href="https://www.facebook.com/neuroteccok"><img src="../iconos/facebook.png" alt="Facebook Link"></a>
+                <a href="https://www.instagram.com/ceteccok/"><img src="../iconos/instagram.png" alt="Instagram Link"></a>
+                <a href="https://youtube.com"><img src="../iconos/youtube.png" alt="Youtube Link"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
