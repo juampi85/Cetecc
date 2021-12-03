@@ -8,7 +8,11 @@ body {
     font-family: 'Nanum Gothic Coding', monospace;
     line-height: 1.6;
     color: black;
-    background-color: bisque;
+    /* background-color: bisque; */
+    
+    /* PROBANDO GRADIENTES */
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
 }
 
 header {
@@ -38,6 +42,9 @@ header {
 
 header nav ul li {
     margin: 0 1em;
+
+    /* PRUEBA DE TRANSFORMACION */
+    transform: rotate(10deg); 
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -65,6 +72,9 @@ a {
     border-radius: 35%;
     width: 150px;
     height: 120px;
+
+    /* PROBANDO EL ESCALADO */
+    transform: scaleX(1.5);
 }
 
 nav ul {
@@ -100,9 +110,20 @@ nav ul li {
     grid-area: tituloHome;
 }
 
+    /* PRUEBA DE TRANSICIONES */
+.tituloHome h1:hover {
+    color: rgba(223, 115, 13, 0.932);
+    font-size: 5rem;
+}    
+
 .subtituloPsico {
     grid-area: subtituloPsico;
     margin-left: 1.5%;
+
+    /* PRUEBA DE ANIMACION */
+    animation: shakeX;
+    animation-duration: 1s;
+    animation-iteration-count: 3;
 }
 
 .textoHome {
@@ -122,6 +143,53 @@ nav ul li {
 
 .mapaCetecc {
     grid-area: mapaCetecc;
+}
+
+/* PRUEBA DE ANIMACIONES C/TRANSICIONES */
+.mapaCetecc:hover {
+    animation-name: mapaLoco;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+/* PRUEBA DE ANIMACIONES y ANIMACIONES */
+/* es meramente de práctica ya que pierde su funcionalidad de mapa */
+@keyframes mapaLoco {
+    0% {
+        opacity: 0.1;
+        transform: rotate(0deg);
+    }
+    12.5% {
+        opacity: 0.2;
+        transform: rotate(45deg);
+    }
+    25% {
+        opacity: 0.3;
+        transform: rotate(90deg);
+    }
+    37.5% {
+        opacity: 0.4;
+        transform: rotate(135deg);
+    }
+    50% {
+        opacity: 0.5;
+        transform: rotate(180deg);
+    }
+    62.5% {
+        opacity: 0.6;
+        transform: rotate(225deg);
+    }
+    75% {
+        opacity: 0.8;
+        transform: rotate(270deg);
+    }
+    87.5% {
+        opacity: 0.9;
+        transform: rotate(315deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(360deg);
+    }
 }
 
 .mapaCetecc iframe {
@@ -144,6 +212,11 @@ nav ul li {
 
 .tituloNosotros {
     grid-area: tituloNosotros;
+
+    /* PRUEBA DE ANIMACIONES */
+    animation: bounceInLeft;
+    animation-duration: 2s;
+    animation-iteration-count: 3;
 }
 
 .fotoAna {
@@ -195,6 +268,11 @@ nav ul li {
     margin-bottom: 15px;
     text-align: center;
     grid-area: objetivosCetecc;
+
+    /* PRUEBA DE ANIMACION */
+    animation: heartBeat;
+    animation-duration: 2s;
+    animation-iteration-count: 3;
 }
 
 .vision {
@@ -227,6 +305,49 @@ nav ul li {
     padding: 0 1.25% 1.25% 1.25%;
 }
 
+.gridServicios {
+    display: grid;
+    grid: "tituloServicios tituloServicios tituloServicios tituloServicios tituloServicios" auto
+    "listadoServicios listadoServicios listadoServicios . ." auto
+    ". horariosServicios horariosServicios horariosServicios ." auto / 1fr 1fr 1fr 1fr 1fr;
+    /* justify-items: center; */
+}
+
+.tituloServicios {
+    grid-area: tituloServicios;
+    margin-bottom: 2.5%;
+}
+
+.listadoServicios {
+    grid-area: listadoServicios;
+    justify-self: center;
+
+    /* PRUEBA DE ANIMACION */
+    animation: jello;
+    animation-duration: 2s;
+    animation-iteration-count: 3;
+}
+
+.horariosServicios {
+    grid-area: horariosServicios;
+    justify-self:center;
+    margin: 20px 0 15px 15px;
+}
+
+  .listadoServicios ul li {
+    list-style-type: none;
+}
+
+.tabla th{
+    text-align: center;
+    padding: 2px 5px;
+}
+
+.tabla td{
+    text-align: left;
+    padding-left: 10px;
+}
+
 .gridContacto {
     width: 100%;
     display: grid;
@@ -248,6 +369,11 @@ nav ul li {
     flex-direction: column;
     flex-wrap: wrap;
     background-color: rgb(201, 214, 184);
+
+    /* PRUEBA DE ANIMACION */
+    animation: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: 3;
 }
 
 .consultaContacto {
@@ -257,45 +383,6 @@ nav ul li {
 
 .resetSubmitContacto {
     padding-left: 18%;
-}
-
-.gridServicios {
-    display: grid;
-    grid: "tituloServicios tituloServicios tituloServicios tituloServicios tituloServicios" auto
-    "listadoServicios listadoServicios listadoServicios . ." auto
-    ". horariosServicios horariosServicios horariosServicios ." auto / 1fr 1fr 1fr 1fr 1fr;
-    /* justify-items: center; */
-}
-
-.tituloServicios {
-    grid-area: tituloServicios;
-    margin-bottom: 2.5%;
-}
-
-.listadoServicios {
-    grid-area: listadoServicios;
-    /* padding-left: 5%; */
-    justify-self: center;
-}
-
-.horariosServicios {
-    grid-area: horariosServicios;
-    justify-self:center;
-    margin: 20px 0 15px 15px;
-}
-
-  .listadoServicios ul li {
-    list-style-type: none;
-}
-
-.tabla th{
-    text-align: center;
-    padding: 2px 5px;
-}
-
-.tabla td{
-    text-align: left;
-    padding-left: 10px;
 }
 
 .footer {     
