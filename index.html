@@ -21,7 +21,8 @@
 </head>
 
 <body>
-    <header class="flexHeader">
+    <!-- Dejo comentado mi Header original por si decido volver a él después de esta entrega -->
+    <!-- <header class="flexHeader">
         <a href="./index.html"> <img class="logo" src="./images/perfil-01.jpg" alt="logo del insituto en tamaño pequeño"
                 width="100" height="100"></a>
         <nav>
@@ -33,7 +34,45 @@
                 <li><a href="./pages/contacto.html"> Contacto </a></li>
             </ul>
         </nav>
-    </header>
+    </header> -->
+
+    <!-- HEADER con Bootstrap pero modificando la estructura a mi proyecto -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html"> <img class="logoCetecc" src="./images/perfil-01.jpg" alt="logo de Cetecc"> </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse headerCetecc" id="navbarSupportedContent">
+                <!-- encontré el ¿comando? "ms auto" que me permitió llevar el menú a la derecha y el logo a la izquierda -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html"> Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./pages/nosotros.html"> Quiénes somos </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./pages/mision.html"> Misión, visión y
+                            valores </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./pages/servicios.html"> Servicios </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./pages/contacto.html"> Contacto </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
 
     <div class="gridHome">
         <section class="imgHome">
@@ -43,9 +82,9 @@
         <div class="tituloHome">
             <h1> Bienvenidos a Cetecc </h1>
         </div>
-        
+
         <!-- PRUEBA DE ANIMACIONES -->
-        <div class="subtituloPsico animate__animated animate__shakeX">
+        <div class="subtituloPsico">
             <h3> Importancia de la Psicoterapia Cognitivo Conductual </h3>
         </div>
 
@@ -79,7 +118,7 @@
         <div class="footerFlex">
             <nav>
                 <ul>
-                    <li><a href="./index.html"> Inicio </a></li>
+                    <li class="homeFooter"><a href="./index.html"> Inicio </a></li>
                     <li><a href="./pages/nosotros.html"> Quiénes somos </a></li>
                     <li><a href="./pages/mision.html"> Visión, Misión y Valores </a></li>
                     <li><a href="./pages/servicios.html"> Servicios </a></li>
