@@ -20,6 +20,8 @@
 
 .tituloHome {
     grid-area: tituloHome;
+    animation: rubberBand;
+    animation-duration: 2s;
 }
 
 .subtituloPsico {
@@ -42,7 +44,6 @@
     }
 }
  
-
 .mapaCetecc {
     grid-area: mapaCetecc;
 
@@ -50,4 +51,8 @@
         margin-left: 3.5%;
         margin-bottom: 3.5%;
     }
+}
+
+.mapaCetecc:hover {
+    transform: rotate(-20deg);
 }

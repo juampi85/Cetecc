@@ -18,6 +18,8 @@
 .vision {
     margin: 15px 0 10px 15px;
     grid-area: vision;
+    animation: rotateIn;
+    animation-duration: 1.5s;
 }
 
 .textoVision {
@@ -28,6 +30,8 @@
 .mision {
     margin: 15px 0 10px 15px;
     grid-area: mision;
+    animation: rotateIn;
+    animation-duration: 1.5s;
 }
 
 .textoMision {
@@ -38,6 +42,8 @@
 .valores {
     margin: 15px 0 10px 15px;
     grid-area: valores;
+    animation: rotateIn;
+    animation-duration: 1.5s;
 }
 
 .textoValores {

@@ -59,7 +59,9 @@ a {
   align-self: center; }
 
 .tituloHome {
-  grid-area: tituloHome; }
+  grid-area: tituloHome;
+  animation: rubberBand;
+  animation-duration: 2s; }
 
 .subtituloPsico {
   grid-area: subtituloPsico;
@@ -82,6 +84,9 @@ a {
     margin-left: 3.5%;
     margin-bottom: 3.5%; }
 
+.mapaCetecc:hover {
+  transform: rotate(-20deg); }
+
 .gridNosotros {
   display: grid;
   grid-template-areas: "tituloNosotros tituloNosotros tituloNosotros" "fotoAna sobreAna sobreAna" "fotoCarla sobreCarla sobreCarla" "fotoMathias sobreMathias sobreMathias";
@@ -91,12 +96,16 @@ a {
   align-items: center; }
 
 .tituloNosotros {
-  grid-area: tituloNosotros; }
+  grid-area: tituloNosotros;
+  animation: fadeInDownBig;
+  animation-duration: 1s; }
 
 .fotoAna {
   grid-area: fotoAna;
   height: auto;
-  padding-top: 4%; }
+  padding-top: 4%;
+  animation: rotateIn;
+  animation-duration: 1.5s; }
 
 .sobreAna {
   grid-area: sobreAna;
@@ -105,7 +114,9 @@ a {
 .fotoCarla {
   grid-area: fotoCarla;
   height: auto;
-  padding-top: 4%; }
+  padding-top: 4%;
+  animation: rotateIn;
+  animation-duration: 1.5s; }
 
 .sobreCarla {
   grid-area: sobreCarla;
@@ -115,7 +126,9 @@ a {
   grid-area: fotoMathias;
   height: auto;
   padding-top: 4%;
-  padding-left: 2%; }
+  padding-left: 2%;
+  animation: rotateIn;
+  animation-duration: 1.5s; }
 
 .sobreMathias {
   grid-area: sobreMathias;
@@ -132,7 +145,9 @@ a {
 
 .vision {
   margin: 15px 0 10px 15px;
-  grid-area: vision; }
+  grid-area: vision;
+  animation: rotateIn;
+  animation-duration: 1.5s; }
 
 .textoVision {
   grid-area: textoVision;
@@ -140,7 +155,9 @@ a {
 
 .mision {
   margin: 15px 0 10px 15px;
-  grid-area: mision; }
+  grid-area: mision;
+  animation: rotateIn;
+  animation-duration: 1.5s; }
 
 .textoMision {
   grid-area: textoMision;
@@ -148,7 +165,9 @@ a {
 
 .valores {
   margin: 15px 0 10px 15px;
-  grid-area: valores; }
+  grid-area: valores;
+  animation: rotateIn;
+  animation-duration: 1.5s; }
 
 .textoValores {
   grid-area: textoValores;
@@ -182,9 +201,10 @@ a {
 
 .footer {
   border: black solid 2px;
-  background-color: rgba(240, 229, 34, 0.664) .footer p;
-    background-color-font-weight: bold;
-    background-color-font-style: italic; }
+  background-color: rgba(240, 229, 34, 0.664); }
+  .footer p {
+    font-weight: bold;
+    font-style: italic; }
   .footer ul {
     display: flex;
     flex-direction: column; }

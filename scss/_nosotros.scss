@@ -13,13 +13,16 @@
 
 .tituloNosotros {
     grid-area: tituloNosotros;
+    animation: fadeInDownBig;
+    animation-duration: 1s;
 }
 
 .fotoAna {
     grid-area: fotoAna;
     height: auto;
     padding-top: 4%;
-    
+    animation: rotateIn;   
+    animation-duration: 1.5s;
 }
 
 .sobreAna {
@@ -31,6 +34,8 @@
     grid-area: fotoCarla;
     height: auto;
     padding-top: 4%;
+    animation: rotateIn;   
+    animation-duration: 1.5s;
 }
 
 .sobreCarla {
@@ -43,6 +48,8 @@
     height: auto;
     padding-top: 4%;
     padding-left: 2%;
+    animation: rotateIn;   
+    animation-duration: 1.5s;
 }
 
 .sobreMathias {
