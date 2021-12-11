@@ -1,0 +1,168 @@
+@media screen and (max-width: 708px) {
+    .logo {
+        width: 100px;
+        height: 90px;
+    }
+    
+    .headerMenu {
+        flex-wrap: nowrap;
+    }
+        
+    .gridServicios {
+    display: grid;
+    grid: "tituloServicios tituloServicios tituloServicios" auto
+    "listadoServicios listadoServicios listadoServicios" auto
+    "horariosServicios horariosServicios horariosServicios" auto / 1fr 1fr 1fr;
+    }
+
+    body {
+        font-size: .80rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+        line-height: 1;
+        margin-bottom: 15px;
+    }
+    
+    h3 {
+        font-size: 1.7rem;
+        line-height: 1;
+    }
+    
+    .sobreMathias {
+        padding: 0 2%;
+    }
+
+    .vision {
+        text-align: center;
+    }    
+
+    .mision {
+        text-align: center;
+    }
+    
+    .valores {
+        text-align: center;
+    }
+    
+    .footer {
+        & p {
+            color: blue;
+        }
+
+        &Flex {
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        &Iconos {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .gridHome {
+        display: grid;
+        grid-template-areas: 
+        "imgHome"
+        "tituloHome"
+        "subtituloPsico"
+        "textoHome"
+        "ubicacionCetecc"
+        "mapaCetecc";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+        justify-items: strecht;
+        align-items: center;
+    }
+
+    .ubicacionCetecc {
+        grid-area: ubicacionCetecc;
+        margin: 15px 0.5%;
+
+        & h3 {
+            text-align: center;
+        }
+    } 
+    
+    .mapaCetecc {
+        grid-area: mapaCetecc;
+
+        & iframe {
+            margin-left: 6%;
+            margin-bottom: 3.5%;
+        }
+    }
+
+    .grid {
+        &Nosotros {
+            grid-template-areas:
+            "tituloNosotros"
+            "fotoAna"
+            "sobreAna"
+            "fotoCarla"
+            "sobreCarla"
+            "fotoMathias"
+            "sobreMathias";
+            justify-items: center;
+            align-items: center;
+        }
+
+        &Mision {
+            grid: "objetivosCetecc" auto
+            "vision" auto
+            "textoVision" auto
+            "mision" auto
+            "textoMision" auto
+            "valores" auto
+            "textoValores" auto / 1fr ;
+        }
+    }
+
+    .sobreAna {
+        text-align: justify;
+    }
+
+    .sobreCarla {
+        text-align: justify;
+    }
+
+    .sobreMathias {
+        text-align: justify;
+        padding-left: 1%;
+    }
+
+    .listadoServicios{  
+        margin-left: 1rem;
+        width: 80%;
+        border: dotted 1px blue;
+
+        & ul li {
+            list-style-type: circle;
+        }
+
+        & ul li:first-child {
+            padding-top: 1rem;
+        }
+    }
+
+    .tabla {
+        border: solid 1px blue;
+    }
+
+    .footerIconos img {
+        height: 52px;
+        width: 55.5px;
+    }
+}

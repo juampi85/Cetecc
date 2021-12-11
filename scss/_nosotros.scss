@@ -1,0 +1,51 @@
+.gridNosotros {
+    display: grid;
+    grid-template-areas:
+    "tituloNosotros tituloNosotros tituloNosotros"
+    "fotoAna sobreAna sobreAna"
+    "fotoCarla sobreCarla sobreCarla"
+    "fotoMathias sobreMathias sobreMathias";
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
+    justify-items: center;
+    align-items: center;
+}
+
+.tituloNosotros {
+    grid-area: tituloNosotros;
+}
+
+.fotoAna {
+    grid-area: fotoAna;
+    height: auto;
+    padding-top: 4%;
+    
+}
+
+.sobreAna {
+    grid-area: sobreAna;
+    padding: 0 1%;
+}
+
+.fotoCarla {
+    grid-area: fotoCarla;
+    height: auto;
+    padding-top: 4%;
+}
+
+.sobreCarla {
+    grid-area: sobreCarla;
+    padding: 0 1%;
+}
+
+.fotoMathias {
+    grid-area: fotoMathias;
+    height: auto;
+    padding-top: 4%;
+    padding-left: 2%;
+}
+
+.sobreMathias {
+    grid-area: sobreMathias;
+    padding: 0 1%;
+}

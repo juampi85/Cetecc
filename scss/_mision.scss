@@ -1,0 +1,46 @@
+.gridMision {
+    display: grid;
+    grid: "objetivosCetecc objetivosCetecc objetivosCetecc" auto
+    "vision . ." auto
+    "textoVision textoVision textoVision" auto
+    "mision . ." auto
+    "textoMision textoMision textoMision" auto
+    "valores . ." auto
+    "textoValores textoValores textoValores" 1fr / 1fr 1fr 1fr;
+}
+
+.objetivosCetecc {
+    margin-bottom: 15px;
+    text-align: center;
+    grid-area: objetivosCetecc;
+}
+
+.vision {
+    margin: 15px 0 10px 15px;
+    grid-area: vision;
+}
+
+.textoVision {
+    grid-area: textoVision;
+    padding: 0 1.25%;
+}
+
+.mision {
+    margin: 15px 0 10px 15px;
+    grid-area: mision;
+}
+
+.textoMision {
+    grid-area: textoMision;
+    padding: 0 1.25%;
+}
+
+.valores {
+    margin: 15px 0 10px 15px;
+    grid-area: valores;
+}
+
+.textoValores {
+    grid-area: textoValores;
+    padding: 0 1.25% 1.25% 1.25%;
+}

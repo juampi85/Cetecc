@@ -1,0 +1,53 @@
+.gridHome {
+    display: grid;
+    grid-template-areas: 
+    "imgHome imgHome imgHome"
+    "tituloHome tituloHome tituloHome"
+    "subtituloPsico subtituloPsico ."
+    "textoHome textoHome textoHome"
+    "ubicacionCetecc ubicacionCetecc ."
+    "mapaCetecc . .";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, auto);
+    justify-items: strecht;
+    align-items: center;
+}
+
+.imgHome {
+    grid-area: imgHome;
+    align-self: center;
+}
+
+.tituloHome {
+    grid-area: tituloHome;
+}
+
+.subtituloPsico {
+    grid-area: subtituloPsico;
+    margin-left: 1.5%;
+}
+
+.textoHome {
+    grid-area: textoHome;
+    margin-left: 1.5%;
+}
+
+.ubicacionCetecc {
+    grid-area: ubicacionCetecc;
+    margin: 15px 0.5%;
+
+    & h3 {
+    margin: 5px 0 0 15px;
+    align-self: flex-end;
+    }
+}
+ 
+
+.mapaCetecc {
+    grid-area: mapaCetecc;
+
+    & iframe {
+        margin-left: 3.5%;
+        margin-bottom: 3.5%;
+    }
+}

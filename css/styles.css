@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Nanum Gothic Coding', monospace;
+  line-height: 1.6;
+  color: black;
+  background-color: bisque; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Baloo 2', cursive;
+  color: #6619FF; }
+
+h1 {
+  font-size: 4rem;
+  text-align: center; }
+
+h3 {
+  font-size: 2rem; }
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold; }
+  a:hover {
+    text-decoration: none;
+    color: black;
+    font-weight: bold; }
+
+.logoCetecc {
+  vertical-align: middle;
+  border-radius: 35%;
+  width: 150px;
+  height: 120px; }
+
+.navbar {
+  background-color: rgba(240, 229, 34, 0.664); }
+
+.logoCetecc:hover {
+  transform: scale(1.25);
+  border-radius: 0%; }
+
+.nav-item:hover {
+  transform: scale(1.5);
+  transform: rotate(-50deg); }
+
+.gridHome {
+  display: grid;
+  grid-template-areas: "imgHome imgHome imgHome" "tituloHome tituloHome tituloHome" "subtituloPsico subtituloPsico ." "textoHome textoHome textoHome" "ubicacionCetecc ubicacionCetecc ." "mapaCetecc . .";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, auto);
+  justify-items: strecht;
+  align-items: center; }
+
+.imgHome {
+  grid-area: imgHome;
+  align-self: center; }
+
+.tituloHome {
+  grid-area: tituloHome; }
+
+.subtituloPsico {
+  grid-area: subtituloPsico;
+  margin-left: 1.5%; }
+
+.textoHome {
+  grid-area: textoHome;
+  margin-left: 1.5%; }
+
+.ubicacionCetecc {
+  grid-area: ubicacionCetecc;
+  margin: 15px 0.5%; }
+  .ubicacionCetecc h3 {
+    margin: 5px 0 0 15px;
+    align-self: flex-end; }
+
+.mapaCetecc {
+  grid-area: mapaCetecc; }
+  .mapaCetecc iframe {
+    margin-left: 3.5%;
+    margin-bottom: 3.5%; }
+
+.gridNosotros {
+  display: grid;
+  grid-template-areas: "tituloNosotros tituloNosotros tituloNosotros" "fotoAna sobreAna sobreAna" "fotoCarla sobreCarla sobreCarla" "fotoMathias sobreMathias sobreMathias";
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(4, auto);
+  justify-items: center;
+  align-items: center; }
+
+.tituloNosotros {
+  grid-area: tituloNosotros; }
+
+.fotoAna {
+  grid-area: fotoAna;
+  height: auto;
+  padding-top: 4%; }
+
+.sobreAna {
+  grid-area: sobreAna;
+  padding: 0 1%; }
+
+.fotoCarla {
+  grid-area: fotoCarla;
+  height: auto;
+  padding-top: 4%; }
+
+.sobreCarla {
+  grid-area: sobreCarla;
+  padding: 0 1%; }
+
+.fotoMathias {
+  grid-area: fotoMathias;
+  height: auto;
+  padding-top: 4%;
+  padding-left: 2%; }
+
+.sobreMathias {
+  grid-area: sobreMathias;
+  padding: 0 1%; }
+
+.gridMision {
+  display: grid;
+  grid: "objetivosCetecc objetivosCetecc objetivosCetecc" auto "vision . ." auto "textoVision textoVision textoVision" auto "mision . ." auto "textoMision textoMision textoMision" auto "valores . ." auto "textoValores textoValores textoValores" 1fr / 1fr 1fr 1fr; }
+
+.objetivosCetecc {
+  margin-bottom: 15px;
+  text-align: center;
+  grid-area: objetivosCetecc; }
+
+.vision {
+  margin: 15px 0 10px 15px;
+  grid-area: vision; }
+
+.textoVision {
+  grid-area: textoVision;
+  padding: 0 1.25%; }
+
+.mision {
+  margin: 15px 0 10px 15px;
+  grid-area: mision; }
+
+.textoMision {
+  grid-area: textoMision;
+  padding: 0 1.25%; }
+
+.valores {
+  margin: 15px 0 10px 15px;
+  grid-area: valores; }
+
+.textoValores {
+  grid-area: textoValores;
+  padding: 0 1.25% 1.25% 1.25%; }
+
+.gridServicios {
+  display: grid;
+  grid: "tituloServicios tituloServicios tituloServicios tituloServicios tituloServicios" auto "listadoServicios listadoServicios listadoServicios . ." auto ". horariosServicios horariosServicios horariosServicios ." auto / 1fr 1fr 1fr 1fr 1fr; }
+
+.tituloServicios {
+  grid-area: tituloServicios;
+  margin-bottom: 2.5%; }
+
+.listadoServicios {
+  grid-area: listadoServicios; }
+  .listadoServicios ul li {
+    list-style-type: none; }
+
+.horariosServicios {
+  grid-area: horariosServicios;
+  justify-self: center;
+  margin: 20px 0 15px 15px; }
+
+.tabla th {
+  text-align: center;
+  padding: 2px 5px; }
+
+.tabla td {
+  text-align: center;
+  padding-left: 10px; }
+
+.footer {
+  border: black solid 2px;
+  background-color: rgba(240, 229, 34, 0.664) .footer p;
+    background-color-font-weight: bold;
+    background-color-font-style: italic; }
+  .footer ul {
+    display: flex;
+    flex-direction: column; }
+  .footer li {
+    list-style-type: none; }
+  .footerFlex {
+    display: flex;
+    flex-wrap: row wrap;
+    justify-content: space-around;
+    align-items: center; }
+    .footerFlex nav ul:first-child {
+      margin-top: 1.3rem; }
+  .footerIconos img {
+    height: 60px;
+    width: 65px; }
+
+@media screen and (max-width: 708px) {
+  .logo {
+    width: 100px;
+    height: 90px; }
+  .headerMenu {
+    flex-wrap: nowrap; }
+  .gridServicios {
+    display: grid;
+    grid: "tituloServicios tituloServicios tituloServicios" auto "listadoServicios listadoServicios listadoServicios" auto "horariosServicios horariosServicios horariosServicios" auto / 1fr 1fr 1fr; }
+  body {
+    font-size: .80rem; }
+  h1 {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 15px; }
+  h3 {
+    font-size: 1.7rem;
+    line-height: 1; }
+  .sobreMathias {
+    padding: 0 2%; }
+  .vision {
+    text-align: center; }
+  .mision {
+    text-align: center; }
+  .valores {
+    text-align: center; }
+  .footer p {
+    color: blue; }
+  .footerFlex {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
+  .footerIconos {
+    margin-bottom: 1rem; } }
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2rem; }
+  h3 {
+    font-size: 1.3rem; }
+  .gridHome {
+    display: grid;
+    grid-template-areas: "imgHome" "tituloHome" "subtituloPsico" "textoHome" "ubicacionCetecc" "mapaCetecc";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    justify-items: strecht;
+    align-items: center; }
+  .ubicacionCetecc {
+    grid-area: ubicacionCetecc;
+    margin: 15px 0.5%; }
+    .ubicacionCetecc h3 {
+      text-align: center; }
+  .mapaCetecc {
+    grid-area: mapaCetecc; }
+    .mapaCetecc iframe {
+      margin-left: 6%;
+      margin-bottom: 3.5%; }
+  .gridNosotros {
+    grid-template-areas: "tituloNosotros" "fotoAna" "sobreAna" "fotoCarla" "sobreCarla" "fotoMathias" "sobreMathias";
+    justify-items: center;
+    align-items: center; }
+  .gridMision {
+    grid: "objetivosCetecc" auto "vision" auto "textoVision" auto "mision" auto "textoMision" auto "valores" auto "textoValores" auto / 1fr; }
+  .sobreAna {
+    text-align: justify; }
+  .sobreCarla {
+    text-align: justify; }
+  .sobreMathias {
+    text-align: justify;
+    padding-left: 1%; }
+  .listadoServicios {
+    margin-left: 1rem;
+    width: 80%;
+    border: dotted 1px blue; }
+    .listadoServicios ul li {
+      list-style-type: circle; }
+    .listadoServicios ul li:first-child {
+      padding-top: 1rem; }
+  .tabla {
+    border: solid 1px blue; }
+  .footerIconos img {
+    height: 52px;
+    width: 55.5px; } }

@@ -1,4 +1,4 @@
-* {
+/* * {
     margin:0;
     padding: 0;
     box-sizing: border-box;
@@ -35,7 +35,7 @@ a:hover {
     text-decoration: none;
     color: black;
     font-weight: bold;
-}
+} */
 
 
 /* Intentaré hacer el HEADER con Bootstrap */
@@ -69,8 +69,7 @@ header nav ul li {
     margin: 0 1em;
 } */
 
- .logoCetecc {
-    
+/* .logoCetecc {
     vertical-align: middle; 
     border-radius: 35%;
     width: 150px;
@@ -86,7 +85,11 @@ header nav ul li {
     margin: 0 10px;   
 }
 
-.gridHome {
+.navbar {
+    background-color: rgba(240, 229, 34, 0.664); 
+} */
+
+/* .gridHome {
     display: grid;
     grid-template-areas: 
     "imgHome imgHome imgHome"
@@ -137,9 +140,9 @@ header nav ul li {
 .mapaCetecc iframe {
     margin-left: 3.5%;
     margin-bottom: 3.5%;
-}
+} */
 
-.gridNosotros {
+/* .gridNosotros {
     display: grid;
     grid-template-areas:
     "tituloNosotros tituloNosotros tituloNosotros"
@@ -160,6 +163,7 @@ header nav ul li {
     grid-area: fotoAna;
     height: auto;
     padding-top: 4%;
+    
 }
 
 .sobreAna {
@@ -188,9 +192,9 @@ header nav ul li {
 .sobreMathias {
     grid-area: sobreMathias;
     padding: 0 1%;
-}
+} */
 
-.gridMision {
+/* .gridMision {
     display: grid;
     grid: "objetivosCetecc objetivosCetecc objetivosCetecc" auto
     "vision . ." auto
@@ -235,9 +239,9 @@ header nav ul li {
 .textoValores {
     grid-area: textoValores;
     padding: 0 1.25% 1.25% 1.25%;
-}
+} */
 
-.gridServicios {
+/* .gridServicios {
     display: grid;
     grid: "tituloServicios tituloServicios tituloServicios tituloServicios tituloServicios" auto
     "listadoServicios listadoServicios listadoServicios . ." auto
@@ -272,41 +276,41 @@ header nav ul li {
 .tabla td{
     text-align: left;
     padding-left: 10px;
-}
+} */
 
-.gridContacto {
-    width: 100%;
-    display: grid;
-    grid: "tituloContacto tituloContacto tituloContacto tituloContacto" auto
-    ". formularioContacto formularioContacto ." auto / 1fr auto auto 1fr;
-    align-items: center;
-    justify-items: center;
-}
+    /* .gridContacto {
+        width: 100%;
+        display: grid;
+        grid: "tituloContacto tituloContacto tituloContacto tituloContacto" auto
+        ". formularioContacto formularioContacto ." auto / 1fr auto auto 1fr;
+        align-items: center;
+        justify-items: center;
+    }
 
-.tituloContacto {
-    grid-area: tituloContacto;
-}
+    .tituloContacto {
+        grid-area: tituloContacto;
+    }
 
-.formularioContacto {
-    grid-area: formularioContacto;
-    padding: 3% 3%;
-    margin-bottom: 5%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    background-color: rgb(201, 214, 184);
-}
+    .formularioContacto {
+        grid-area: formularioContacto;
+        padding: 3% 3%;
+        margin-bottom: 5%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: rgb(201, 214, 184);
+    }
 
-.consultaContacto {
-    padding-left: 12%;
-    padding-top: 3%;
-}
+    .consultaContacto {
+        padding-left: 12%;
+        padding-top: 3%;
+    }
 
-.resetSubmitContacto {
-    padding-left: 18%;
-}
+    .resetSubmitContacto {
+        padding-left: 18%;
+    } */
 
-.footer {     
+/* .footer {     
     border: black solid 2px;
     background-color: rgba(240, 229, 34, 0.664)
 }
@@ -326,25 +330,23 @@ header nav ul li {
 }
 
 .footerFlex {
-    /* margin-top: 1.5rem; */
     display: flex;
     flex-wrap: row wrap;
     justify-content: space-around;
     align-items: center;
 }
 
-.homeFooter {
+.footerFlex nav ul li:first-child {
     margin-top: 1rem;
 }
-
 .footerIconos img {
     height: 60px;
     width: 65px;
-}
+} */
 
 /*  MEDIA QUERIES  */
 
-@media screen and (max-width: 708px) {
+/* @media screen and (max-width: 708px) {
     .logo {
         width: 100px;
         height: 90px;
@@ -393,11 +395,13 @@ header nav ul li {
     }
     
     .footerFlex {
-        /* margin-top: 50px; */
-        /* display: flex; */
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+    }
+
+    .footerIconos {
+        margin-bottom: 1rem;
     }
 
     .footer p {
@@ -435,8 +439,6 @@ header nav ul li {
     }
     
     .ubicacionCetecc h3 {
-        /* margin-left: 1.5%; */
-        /* align-self: flex-end; */
         text-align: center;
     }
     
@@ -450,7 +452,6 @@ header nav ul li {
     }
 
     .gridNosotros {
-        /* display: grid; */
         grid-template-areas:
         "tituloNosotros"
         "fotoAna"
@@ -486,7 +487,7 @@ header nav ul li {
         "textoValores" auto / 1fr ;
     }
 
-    .listadoServicios{
+    .listadoServicios{  
         border: dotted 1px blue;
     }
 
@@ -499,12 +500,8 @@ header nav ul li {
         list-style-type: circle;
     }
 
-    .formularioContacto {
-        background-color: yellowgreen;
-    }
-
     .footerIconos img {
-        height: 45px;
-        width: 48.5px;
+        height: 52px;
+        width: 55.5px;
     }
-}
+} */
