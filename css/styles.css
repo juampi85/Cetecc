@@ -1,3 +1,8 @@
+@charset "UTF-8";
+.botones {
+  text-align: end;
+  margin: 1% 1%; }
+
 * {
   margin: 0;
   padding: 0;
@@ -9,17 +14,34 @@ body {
   color: black;
   background-color: bisque; }
 
-h1, h2, h3, h4, h5, h6 {
+/*DEJO COMENTADO PARA IMPLEMENTAR UN "EXTEND" */
+/*h1, h2, h3, h4, h5, h6 {
+    font-family: 'Baloo 2', cursive;
+    color: #6619FF;
+
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+}*/
+/* ACÁ IMPLEMENTO EL "EXTEND"*/
+.formatoTitulos, .titulos, .subtitulos {
   font-family: 'Baloo 2', cursive;
   color: #6619FF; }
 
-h1 {
+.titulos {
   font-size: 4rem;
   text-align: center; }
 
-h3 {
-  font-size: 2rem; }
+.subtitulos {
+  font-size: 2rem;
+  color: #993030; }
 
+/* HASTA ACÁ LLEGÓ EL EXTEND */
 a {
   text-decoration: none;
   color: black;
@@ -34,60 +56,57 @@ a {
   border-radius: 35%;
   width: 150px;
   height: 120px; }
+  .logoCetecc:hover {
+    transform: scale(1.2);
+    border-radius: 0%; }
 
 .navbar {
   background-color: rgba(240, 229, 34, 0.664); }
 
-.logoCetecc:hover {
-  transform: scale(1.25);
-  border-radius: 0%; }
+.home {
+  /* ACÁ IMPLEMENTO EL MIXIN "botonesArriba" */ }
+  .homeGrid {
+    display: grid;
+    grid-template-areas: "portada portada portada" "tituloHome tituloHome tituloHome" "subtituloPsico subtituloPsico ." "textoHome textoHome textoHome" "ubicacionCetecc ubicacionCetecc ." "mapaCetecc . .";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, auto);
+    justify-items: strecht;
+    align-items: center; }
+  .homePortada {
+    grid-area: portada;
+    width: 100%; }
+  .homeImg {
+    align-self: center;
+    width: 100%;
+    height: 300px; }
+  .homeTitulo {
+    grid-area: tituloHome; }
+  .homeImportanciaPsico {
+    grid-area: subtituloPsico;
+    margin: 0 0 0 1.5%; }
+    .homeImportanciaPsicoTexto {
+      grid-area: textoHome;
+      margin: 0 0 0 1.5%; }
+  .homeUbicacion {
+    grid-area: ubicacionCetecc;
+    margin: 0 0 0 1.5%; }
+    .homeUbicacion h2 {
+      margin: 5px 0 0 0.8%;
+      align-self: flex-end; }
+  .homeMapa {
+    grid-area: mapaCetecc; }
+    .homeMapa iframe {
+      margin: 3.5% 3.5%; }
+    .homeMapa:hover {
+      transform: rotate(-2deg); }
+  .homeBotonArriba {
+    height: 5%;
+    width: 10%;
+    background-color: #40c2e9;
+    border: 1px dotted red;
+    border-radius: 15%; }
 
-.nav-item:hover {
-  transform: scale(1.5);
-  transform: rotate(-50deg); }
-
-.gridHome {
-  display: grid;
-  grid-template-areas: "imgHome imgHome imgHome" "tituloHome tituloHome tituloHome" "subtituloPsico subtituloPsico ." "textoHome textoHome textoHome" "ubicacionCetecc ubicacionCetecc ." "mapaCetecc . .";
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(6, auto);
-  justify-items: strecht;
-  align-items: center; }
-
-.imgHome {
-  grid-area: imgHome;
-  align-self: center; }
-
-.tituloHome {
-  grid-area: tituloHome;
-  animation: rubberBand;
-  animation-duration: 2s; }
-
-.subtituloPsico {
-  grid-area: subtituloPsico;
-  margin-left: 1.5%; }
-
-.textoHome {
-  grid-area: textoHome;
-  margin-left: 1.5%; }
-
-.ubicacionCetecc {
-  grid-area: ubicacionCetecc;
-  margin: 15px 0.5%; }
-  .ubicacionCetecc h3 {
-    margin: 5px 0 0 15px;
-    align-self: flex-end; }
-
-.mapaCetecc {
-  grid-area: mapaCetecc; }
-  .mapaCetecc iframe {
-    margin-left: 3.5%;
-    margin-bottom: 3.5%; }
-
-.mapaCetecc:hover {
-  transform: rotate(-20deg); }
-
-.gridNosotros {
+.nosotrosGrid {
   display: grid;
   grid-template-areas: "tituloNosotros tituloNosotros tituloNosotros" "fotoAna sobreAna sobreAna" "fotoCarla sobreCarla sobreCarla" "fotoMathias sobreMathias sobreMathias";
   grid-template-columns: repeat(3, auto);
@@ -95,109 +114,129 @@ a {
   justify-items: center;
   align-items: center; }
 
-.tituloNosotros {
+.nosotrosTitulo {
   grid-area: tituloNosotros;
   animation: fadeInDownBig;
   animation-duration: 1s; }
 
-.fotoAna {
+.nosotrosFotoAna {
   grid-area: fotoAna;
   height: auto;
-  padding-top: 4%;
-  animation: rotateIn;
-  animation-duration: 1.5s; }
+  padding-top: 4%; }
 
-.sobreAna {
+.nosotrosSobreAna {
   grid-area: sobreAna;
   padding: 0 1%; }
 
-.fotoCarla {
+.nosotrosFotoCarla {
   grid-area: fotoCarla;
   height: auto;
-  padding-top: 4%;
-  animation: rotateIn;
-  animation-duration: 1.5s; }
+  padding-top: 4%; }
 
-.sobreCarla {
+.nosotrosSobreCarla {
   grid-area: sobreCarla;
   padding: 0 1%; }
 
-.fotoMathias {
+.nosotrosFotoMathias {
   grid-area: fotoMathias;
   height: auto;
   padding-top: 4%;
-  padding-left: 2%;
-  animation: rotateIn;
-  animation-duration: 1.5s; }
+  padding-left: 2%; }
 
-.sobreMathias {
+.nosotrosSobreMathias {
   grid-area: sobreMathias;
   padding: 0 1%; }
 
-.gridMision {
+.nosotrosBotonArriba {
+  height: 10%;
+  width: 20%;
+  background-color: #a7ca0a;
+  border: 1px solid black;
+  border-radius: 25%; }
+
+.misionGrid {
   display: grid;
   grid: "objetivosCetecc objetivosCetecc objetivosCetecc" auto "vision . ." auto "textoVision textoVision textoVision" auto "mision . ." auto "textoMision textoMision textoMision" auto "valores . ." auto "textoValores textoValores textoValores" 1fr / 1fr 1fr 1fr; }
 
-.objetivosCetecc {
-  margin-bottom: 15px;
+.misionObjetivosGrales {
+  margin-bottom: 2.5%;
   text-align: center;
-  grid-area: objetivosCetecc; }
+  grid-area: objetivosCetecc;
+  animation: animate__jello;
+  animation-duration: 2s; }
 
-.vision {
-  margin: 15px 0 10px 15px;
-  grid-area: vision;
-  animation: rotateIn;
-  animation-duration: 1.5s; }
+.misionVision {
+  margin-left: 5%;
+  grid-area: vision; }
+  .misionVisionTexto {
+    margin: 15px 0 10px 15px;
+    grid-area: textoVision; }
 
-.textoVision {
-  grid-area: textoVision;
-  padding: 0 1.25%; }
+.misionMision {
+  margin-left: 5%;
+  grid-area: mision; }
+  .misionMisionTexto {
+    margin: 15px 0 10px 15px;
+    grid-area: textoMision; }
 
-.mision {
-  margin: 15px 0 10px 15px;
-  grid-area: mision;
-  animation: rotateIn;
-  animation-duration: 1.5s; }
+.misionValores {
+  margin-left: 5%;
+  grid-area: valores; }
+  .misionValoresTexto {
+    grid-area: textoValores;
+    padding: 0 1.25% 1.25% 1.25%; }
 
-.textoMision {
-  grid-area: textoMision;
-  padding: 0 1.25%; }
+.misionBotonArriba {
+  height: 5%;
+  width: 10%;
+  background-color: #ee1279;
+  border: 1px double #e8f804;
+  border-radius: 40%; }
 
-.valores {
-  margin: 15px 0 10px 15px;
-  grid-area: valores;
-  animation: rotateIn;
-  animation-duration: 1.5s; }
-
-.textoValores {
-  grid-area: textoValores;
-  padding: 0 1.25% 1.25% 1.25%; }
-
-.gridServicios {
+.serviciosGrid {
   display: grid;
-  grid: "tituloServicios tituloServicios tituloServicios tituloServicios tituloServicios" auto "listadoServicios listadoServicios listadoServicios . ." auto ". horariosServicios horariosServicios horariosServicios ." auto / 1fr 1fr 1fr 1fr 1fr; }
+  grid: "tituloServicios tituloServicios tituloServicios tituloServicios tituloServicios" auto "listadoServicios listadoServicios listadoServicios . ." auto / 1fr 1fr 1fr 1fr 1fr;
+  /*". horariosServicios horariosServicios horariosServicios ." auto*/ }
 
-.tituloServicios {
+.serviciosTitulo {
   grid-area: tituloServicios;
   margin-bottom: 2.5%; }
 
-.listadoServicios {
+.serviciosListado {
   grid-area: listadoServicios; }
-  .listadoServicios ul li {
+  .serviciosListado ul li {
     list-style-type: none; }
 
-.horariosServicios {
-  grid-area: horariosServicios;
-  justify-self: center;
-  margin: 20px 0 15px 15px; }
+.serviciosBotonArriba {
+  height: 20%;
+  width: 40%;
+  background-color: #cdfa2b;
+  border: 1px ridge #4d0dc4;
+  border-radius: 50%; }
 
-.tabla th {
+/* Esta parte no es necesaria con la tabla de BootStrap*/
+/*.horariosServicios {
+    grid-area: horariosServicios;
+    justify-self:center;
+    margin: 20px 0 15px 15px;
+}*/
+.table th {
   text-align: center;
   padding: 2px 5px; }
 
-.tabla td {
+.table td {
   text-align: center;
   padding-left: 10px; }
+
+.contactoMapa {
+  margin: 2% 0 2% 2%; }
+
+.contactoBotonArriba {
+  height: 7.5%;
+  width: 15%;
+  background-color: #7a2bfa;
+  border: 1px grrove white;
+  border-radius: 100%; }
 
 .footer {
   border: black solid 2px;
@@ -208,8 +247,8 @@ a {
   .footer ul {
     display: flex;
     flex-direction: column; }
-  .footer li {
-    list-style-type: none; }
+    .footer ul li {
+      list-style-type: none; }
   .footerFlex {
     display: flex;
     flex-wrap: row wrap;
@@ -220,33 +259,31 @@ a {
   .footerIconos img {
     height: 60px;
     width: 65px; }
+    .footerIconos img:hover {
+      transform: scale(1.2);
+      border-radius: 50%; }
 
 @media screen and (max-width: 708px) {
-  .logo {
-    width: 100px;
-    height: 90px; }
-  .headerMenu {
-    flex-wrap: nowrap; }
-  .gridServicios {
-    display: grid;
-    grid: "tituloServicios tituloServicios tituloServicios" auto "listadoServicios listadoServicios listadoServicios" auto "horariosServicios horariosServicios horariosServicios" auto / 1fr 1fr 1fr; }
   body {
     font-size: .80rem; }
-  h1 {
+  .titulos {
     font-size: 3rem;
     line-height: 1;
     margin-bottom: 15px; }
-  h3 {
+  .subtitulos {
     font-size: 1.7rem;
     line-height: 1; }
-  .sobreMathias {
+  .logoCetecc {
+    width: 100px;
+    height: 90px; }
+  .homeImg {
+    height: 200px;
+    width: 100%; }
+  .serviciosGrid {
+    display: grid;
+    grid: "tituloServicios tituloServicios tituloServicios" auto "listadoServicios listadoServicios listadoServicios" auto / 1fr 1fr 1fr; }
+  .nosotrosSobreMathias {
     padding: 0 2%; }
-  .vision {
-    text-align: center; }
-  .mision {
-    text-align: center; }
-  .valores {
-    text-align: center; }
   .footer p {
     color: blue; }
   .footerFlex {
@@ -257,32 +294,40 @@ a {
     margin-bottom: 1rem; } }
 
 @media screen and (max-width: 480px) {
-  h1 {
+  body {
+    font-size: .70rem; }
+  .titulos {
     font-size: 2rem; }
-  h3 {
-    font-size: 1.3rem; }
-  .gridHome {
+  .subtitulos {
+    font-size: 1.35rem; }
+  .logoCetecc {
+    width: 85px;
+    height: 76.5px; }
+  .homeGrid {
     display: grid;
-    grid-template-areas: "imgHome" "tituloHome" "subtituloPsico" "textoHome" "ubicacionCetecc" "mapaCetecc";
+    grid-template-areas: "portada" "tituloHome" "subtituloPsico" "textoHome" "ubicacionCetecc" "mapaCetecc";
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, auto);
     justify-items: strecht;
     align-items: center; }
-  .ubicacionCetecc {
+  .homeImg {
+    height: 150px;
+    width: 100%; }
+  .homeUbicacion {
     grid-area: ubicacionCetecc;
     margin: 15px 0.5%; }
-    .ubicacionCetecc h3 {
+    .homeUbicacion h2 {
       text-align: center; }
-  .mapaCetecc {
+  .homeMapa {
     grid-area: mapaCetecc; }
-    .mapaCetecc iframe {
-      margin-left: 6%;
-      margin-bottom: 3.5%; }
-  .gridNosotros {
+    .homeMapa iframe {
+      margin: 3.5% 6.5%;
+      text-align: center; }
+  .nosotrosGrid {
     grid-template-areas: "tituloNosotros" "fotoAna" "sobreAna" "fotoCarla" "sobreCarla" "fotoMathias" "sobreMathias";
     justify-items: center;
     align-items: center; }
-  .gridMision {
+  .nosotros .misionGrid {
     grid: "objetivosCetecc" auto "vision" auto "textoVision" auto "mision" auto "textoMision" auto "valores" auto "textoValores" auto / 1fr; }
   .sobreAna {
     text-align: justify; }
@@ -291,16 +336,14 @@ a {
   .sobreMathias {
     text-align: justify;
     padding-left: 1%; }
-  .listadoServicios {
+  .serviciosListado {
     margin-left: 1rem;
     width: 80%;
     border: dotted 1px blue; }
-    .listadoServicios ul li {
+    .serviciosListado ul li {
       list-style-type: circle; }
-    .listadoServicios ul li:first-child {
+    .serviciosListado ul li:first-child {
       padding-top: 1rem; }
-  .tabla {
-    border: solid 1px blue; }
   .footerIconos img {
     height: 52px;
     width: 55.5px; } }

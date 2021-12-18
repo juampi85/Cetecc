@@ -1,7 +1,8 @@
-.gridHome {
+.home {
+    &Grid {
     display: grid;
     grid-template-areas: 
-    "imgHome imgHome imgHome"
+    "portada portada portada"
     "tituloHome tituloHome tituloHome"
     "subtituloPsico subtituloPsico ."
     "textoHome textoHome textoHome"
@@ -11,48 +12,56 @@
     grid-template-rows: repeat(6, auto);
     justify-items: strecht;
     align-items: center;
-}
-
-.imgHome {
-    grid-area: imgHome;
-    align-self: center;
-}
-
-.tituloHome {
-    grid-area: tituloHome;
-    animation: rubberBand;
-    animation-duration: 2s;
-}
-
-.subtituloPsico {
-    grid-area: subtituloPsico;
-    margin-left: 1.5%;
-}
-
-.textoHome {
-    grid-area: textoHome;
-    margin-left: 1.5%;
-}
-
-.ubicacionCetecc {
-    grid-area: ubicacionCetecc;
-    margin: 15px 0.5%;
-
-    & h3 {
-    margin: 5px 0 0 15px;
-    align-self: flex-end;
     }
-}
+
+    &Portada {
+        grid-area: portada;
+        width: 100%;
+    }
+
+    &Img {
+        align-self: center;
+        width: 100%;
+        height: 300px;
+    }
+
+    &Titulo {
+        grid-area: tituloHome;
+    }
+
+    &ImportanciaPsico {
+        grid-area: subtituloPsico;
+        margin: 0 0 0 1.5%;
+        
+        &Texto {
+            grid-area: textoHome;
+            margin: 0 0 0 1.5%;
+        }
+    }
+
+    &Ubicacion {
+        grid-area: ubicacionCetecc;
+        margin: 0 0 0 1.5%;
+
+        & h2 {
+        margin: 5px 0 0 0.8%;
+        align-self: flex-end;
+        }
+    }
  
-.mapaCetecc {
-    grid-area: mapaCetecc;
+    &Mapa {
+        grid-area: mapaCetecc;
 
-    & iframe {
-        margin-left: 3.5%;
-        margin-bottom: 3.5%;
+        & iframe {
+            margin: 3.5% 3.5%;
+        }
+    
+        &:hover {
+            transform: rotate(-2deg);
+        }
     }
-}
-
-.mapaCetecc:hover {
-    transform: rotate(-20deg);
+    /* ACÁ IMPLEMENTO EL MIXIN "botonesArriba" */
+    &BotonArriba {
+        @include botonesArriba(5%, 10%, rgb(64, 194, 233), 1px dotted red, 15%);
+    }
 }

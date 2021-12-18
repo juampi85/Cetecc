@@ -3,18 +3,13 @@
     border-radius: 35%;
     width: 150px;
     height: 120px;
+
+    &:hover {
+        transform: scale(1.20);
+        border-radius: 0%;
+    }
 }
 
 .navbar {
     background-color: rgba(240, 229, 34, 0.664); 
-}
-
-.logoCetecc:hover {
-    transform: scale(1.25);
-    border-radius: 0%;
-}
-
-.nav-item:hover {
-    transform: scale(1.50);
-    transform: rotate(-50deg);
 }

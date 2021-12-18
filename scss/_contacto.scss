@@ -1,0 +1,7 @@
+.contactoMapa {
+    margin: 2% 0 2% 2%;
+}
+
+.contactoBotonArriba {
+    @include botonesArriba(7.5%, 15%, rgb(122, 43, 250), 1px grrove rgb(255, 255, 255), 100%);
+}

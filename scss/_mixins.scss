@@ -1,0 +1,12 @@
+@mixin botonesArriba($alto, $ancho, $colorFondo, $borde, $puntasRedondeadas) {
+    height: $alto;
+    width: $ancho;
+    background-color: $colorFondo;
+    border: $borde;
+    border-radius: $puntasRedondeadas;
+}
+
+.botones {
+    text-align: end;
+    margin: 1% 1%;
+}

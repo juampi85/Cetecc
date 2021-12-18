@@ -1,52 +1,53 @@
-.gridMision {
-    display: grid;
-    grid: "objetivosCetecc objetivosCetecc objetivosCetecc" auto
-    "vision . ." auto
-    "textoVision textoVision textoVision" auto
-    "mision . ." auto
-    "textoMision textoMision textoMision" auto
-    "valores . ." auto
-    "textoValores textoValores textoValores" 1fr / 1fr 1fr 1fr;
-}
-
-.objetivosCetecc {
-    margin-bottom: 15px;
-    text-align: center;
-    grid-area: objetivosCetecc;
-}
-
-.vision {
-    margin: 15px 0 10px 15px;
-    grid-area: vision;
-    animation: rotateIn;
-    animation-duration: 1.5s;
-}
-
-.textoVision {
-    grid-area: textoVision;
-    padding: 0 1.25%;
-}
-
 .mision {
-    margin: 15px 0 10px 15px;
-    grid-area: mision;
-    animation: rotateIn;
-    animation-duration: 1.5s;
-}
-
-.textoMision {
-    grid-area: textoMision;
-    padding: 0 1.25%;
-}
-
-.valores {
-    margin: 15px 0 10px 15px;
-    grid-area: valores;
-    animation: rotateIn;
-    animation-duration: 1.5s;
-}
-
-.textoValores {
-    grid-area: textoValores;
-    padding: 0 1.25% 1.25% 1.25%;
+    &Grid {
+        display: grid;
+        grid: "objetivosCetecc objetivosCetecc objetivosCetecc" auto
+        "vision . ." auto
+        "textoVision textoVision textoVision" auto
+        "mision . ." auto
+        "textoMision textoMision textoMision" auto
+        "valores . ." auto
+        "textoValores textoValores textoValores" 1fr / 1fr 1fr 1fr;
+    }    
+    
+    &Objetivos {
+        &Grales {
+            margin-bottom: 2.5%;
+            text-align: center;
+            grid-area: objetivosCetecc;
+            animation: animate__jello;
+            animation-duration: 2s;
+        }
+    }
+    
+    &Vision {
+        margin-left: 5%;
+        grid-area: vision;
+        &Texto {   
+            margin: 15px 0 10px 15px;
+            grid-area: textoVision;
+        }
+    }
+        
+    &Mision {
+        margin-left: 5%;
+        grid-area: mision;
+        &Texto {
+            margin: 15px 0 10px 15px;
+            grid-area: textoMision;
+        }
+    }
+        
+    &Valores {
+        margin-left: 5%;
+        grid-area: valores;
+        &Texto {
+            grid-area: textoValores;
+            padding: 0 1.25% 1.25% 1.25%;
+        }
+    }
+    
+    &BotonArriba {
+        @include botonesArriba(5%, 10%, rgb(238, 18, 121), 1px double rgb(232, 248, 4), 40%);
+    }
 }

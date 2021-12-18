@@ -10,11 +10,11 @@
     & ul {
         display: flex;
         flex-direction: column;
-    }
 
         & li {
             list-style-type: none;
         }
+    }
 
     &Flex {
         display: flex;
@@ -27,8 +27,15 @@
         }
     }
 
-    &Iconos img {
+    &Iconos {
+        & img {
         height: 60px;
         width: 65px;
+        
+            &:hover {
+                transform: scale(1.20);
+                border-radius: 50%;
+            }
+        }
     }
 }

@@ -11,19 +11,40 @@ body {
     background-color: bisque;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/*DEJO COMENTADO PARA IMPLEMENTAR UN "EXTEND" */
+/*h1, h2, h3, h4, h5, h6 {
     font-family: 'Baloo 2', cursive;
     color: #6619FF;
-}
+
 
 h1 {
     font-size: 4rem;
     text-align: center;
 }
 
-h3 {
+h2 {
     font-size: 2rem;
+}*/
+
+/* ACÁ IMPLEMENTO EL "EXTEND"*/
+
+.formatoTitulos {
+    font-family: 'Baloo 2', cursive;
+    color: #6619FF;
 }
+
+.titulos {
+    @extend .formatoTitulos;
+        font-size: 4rem;
+        text-align: center;
+}
+
+.subtitulos {
+    @extend .formatoTitulos;
+    font-size: 2rem;
+    color: rgb(153, 48, 48);
+}
+/* HASTA ACÁ LLEGÓ EL EXTEND */
 
 a {
     text-decoration: none;
@@ -36,4 +57,3 @@ a {
         font-weight: bold;
     }
 }
-

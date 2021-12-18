@@ -1,58 +1,58 @@
-.gridNosotros {
-    display: grid;
-    grid-template-areas:
-    "tituloNosotros tituloNosotros tituloNosotros"
-    "fotoAna sobreAna sobreAna"
-    "fotoCarla sobreCarla sobreCarla"
-    "fotoMathias sobreMathias sobreMathias";
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(4, auto);
-    justify-items: center;
-    align-items: center;
-}
+.nosotros {
+    &Grid {
+        display: grid;
+        grid-template-areas:
+        "tituloNosotros tituloNosotros tituloNosotros"
+        "fotoAna sobreAna sobreAna"
+        "fotoCarla sobreCarla sobreCarla"
+        "fotoMathias sobreMathias sobreMathias";
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(4, auto);
+        justify-items: center;
+        align-items: center;
+    }
 
-.tituloNosotros {
-    grid-area: tituloNosotros;
-    animation: fadeInDownBig;
-    animation-duration: 1s;
-}
+    &Titulo {
+        grid-area: tituloNosotros;
+        animation: fadeInDownBig;
+        animation-duration: 1s;
+    }
 
-.fotoAna {
-    grid-area: fotoAna;
-    height: auto;
-    padding-top: 4%;
-    animation: rotateIn;   
-    animation-duration: 1.5s;
-}
+    &FotoAna {
+        grid-area: fotoAna;
+        height: auto;
+        padding-top: 4%;
+    }
 
-.sobreAna {
-    grid-area: sobreAna;
-    padding: 0 1%;
-}
+    &SobreAna {
+        grid-area: sobreAna;
+        padding: 0 1%;
+    }
 
-.fotoCarla {
-    grid-area: fotoCarla;
-    height: auto;
-    padding-top: 4%;
-    animation: rotateIn;   
-    animation-duration: 1.5s;
-}
+    &FotoCarla {
+        grid-area: fotoCarla;
+        height: auto;
+        padding-top: 4%;
+    }
 
-.sobreCarla {
-    grid-area: sobreCarla;
-    padding: 0 1%;
-}
+    &SobreCarla {
+        grid-area: sobreCarla;
+        padding: 0 1%;
+    }
 
-.fotoMathias {
-    grid-area: fotoMathias;
-    height: auto;
-    padding-top: 4%;
-    padding-left: 2%;
-    animation: rotateIn;   
-    animation-duration: 1.5s;
-}
+   &FotoMathias {
+        grid-area: fotoMathias;
+        height: auto;
+        padding-top: 4%;
+        padding-left: 2%;
+    }
 
-.sobreMathias {
+    &SobreMathias {
     grid-area: sobreMathias;
     padding: 0 1%;
+    }
+
+    &BotonArriba {
+        @include botonesArriba(10%, 20%, rgb(167, 202, 10), 1px solid black, 25%);
+    }
 }

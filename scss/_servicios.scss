@@ -1,30 +1,41 @@
-.gridServicios {
-    display: grid;
-    grid: "tituloServicios tituloServicios tituloServicios tituloServicios tituloServicios" auto
-    "listadoServicios listadoServicios listadoServicios . ." auto
-    ". horariosServicios horariosServicios horariosServicios ." auto / 1fr 1fr 1fr 1fr 1fr;
-}
-
-.tituloServicios {
-    grid-area: tituloServicios;
-    margin-bottom: 2.5%;
-}
-
-.listadoServicios {
-    grid-area: listadoServicios;
+.servicios {
+    &Grid {
+        display: grid;
+        grid: "tituloServicios tituloServicios tituloServicios tituloServicios tituloServicios" auto
+        "listadoServicios listadoServicios listadoServicios . ." auto / 1fr 1fr 1fr 1fr 1fr;
+        /*". horariosServicios horariosServicios horariosServicios ." auto*/
+    }
+        
+    &Titulo {
+        grid-area: tituloServicios;
+        margin-bottom: 2.5%;
+    }
     
-    & ul li {
-        list-style-type: none;
+    &Listado {
+        grid-area: listadoServicios;
+        
+        & ul li {
+            list-style-type: none;
+        }
+    }
+    
+    &BotonArriba {
+        @include botonesArriba(20%, 40%, rgb(205, 250, 43), 1px ridge rgb(77, 13, 196), 50%);
     }
 }
 
-.horariosServicios {
+
+
+
+
+/* Esta parte no es necesaria con la tabla de BootStrap*/
+/*.horariosServicios {
     grid-area: horariosServicios;
     justify-self:center;
     margin: 20px 0 15px 15px;
-}
+}*/
 
-.tabla {
+.table {
     & th{
     text-align: center;
     padding: 2px 5px;
