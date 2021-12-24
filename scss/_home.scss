@@ -42,11 +42,6 @@
     &Ubicacion {
         grid-area: ubicacionCetecc;
         margin: 0 0 0 1.5%;
-
-        & h2 {
-        margin: 5px 0 0 0.8%;
-        align-self: flex-end;
-        }
     }
  
     &Mapa {
@@ -55,13 +50,5 @@
         & iframe {
             margin: 3.5% 3.5%;
         }
-    
-        &:hover {
-            transform: rotate(-2deg);
-        }
-    }
-    /* ACÁ IMPLEMENTO EL MIXIN "botonesArriba" */
-    &BotonArriba {
-        @include botonesArriba(5%, 10%, rgb(64, 194, 233), 1px dotted red, 15%);
     }
 }

@@ -15,8 +15,6 @@
             margin-bottom: 2.5%;
             text-align: center;
             grid-area: objetivosCetecc;
-            animation: animate__jello;
-            animation-duration: 2s;
         }
     }
     
@@ -42,12 +40,8 @@
         margin-left: 5%;
         grid-area: valores;
         &Texto {
+            margin: 15px 0 10px 15px;
             grid-area: textoValores;
-            padding: 0 1.25% 1.25% 1.25%;
         }
-    }
-    
-    &BotonArriba {
-        @include botonesArriba(5%, 10%, rgb(238, 18, 121), 1px double rgb(232, 248, 4), 40%);
     }
 }

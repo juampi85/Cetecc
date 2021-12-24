@@ -2,8 +2,10 @@
     &Grid {
         display: grid;
         grid: "tituloServicios tituloServicios tituloServicios tituloServicios tituloServicios" auto
-        "listadoServicios listadoServicios listadoServicios . ." auto / 1fr 1fr 1fr 1fr 1fr;
-        /*". horariosServicios horariosServicios horariosServicios ." auto*/
+        "listadoServicios listadoServicios listadoServicios . ." auto
+        "subtituloServicios subtituloServicios subtituloServicios subtituloServicios subtituloServicios" auto
+        "poblaciones poblaciones poblaciones poblaciones poblaciones" auto;
+        grid-template-columns: repeat(5, 1fr);
     }
         
     &Titulo {
@@ -13,27 +15,19 @@
     
     &Listado {
         grid-area: listadoServicios;
-        
-        & ul li {
-            list-style-type: none;
-        }
     }
-    
-    &BotonArriba {
-        @include botonesArriba(20%, 40%, rgb(205, 250, 43), 1px ridge rgb(77, 13, 196), 50%);
+
+    &Subtitulos {
+        grid-area: subtituloServicios;
+        margin-top: 2.5%;
+        margin-left: 1.5%;
+    }
+
+    &Poblaciones {
+        grid-area: poblaciones;
+        // margin-left: 1.5%;
     }
 }
-
-
-
-
-
-/* Esta parte no es necesaria con la tabla de BootStrap*/
-/*.horariosServicios {
-    grid-area: horariosServicios;
-    justify-self:center;
-    margin: 20px 0 15px 15px;
-}*/
 
 .table {
     & th{
