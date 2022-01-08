@@ -39,6 +39,9 @@ a {
     transform: scale(1.2);
     border-radius: 0%; }
 
+.nav-item:hover {
+  transform: rotate(-5deg); }
+
 .navbar {
   background-color: rgba(240, 229, 34, 0.664); }
 
