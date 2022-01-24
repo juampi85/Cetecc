@@ -16,70 +16,93 @@
 
     &Titulo {
         grid-area: tituloNosotros;
+        margin:20px 10px;
+
     }
 
     &FotoAna {
         grid-area: fotoAna;
         height: auto;
-        width: fit-content;
-        margin: 0 auto;
+        align-self: start;
+        justify-self: end;
+
+        &Png {
+            margin-top: 5%;
+        }
     }
+
 
     &SobreAna {
         grid-area: sobreAna;
         padding: 0 1%;
-        margin-top: 3%;
+        margin-bottom: 5%;
     }
 
     &FotoCarla {
         grid-area: fotoCarla;
         height: auto;
-        width: fit-content;
-        margin: 0 auto;
+        align-self: start;
+        justify-self: end;
+    
+        &Png {
+            margin-top: 5%;
+        }
     }
 
     &SobreCarla {
         grid-area: sobreCarla;
         padding: 0 1%;
-        margin-top: 3%;
+        margin-bottom: 5%;
     }
 
    &FotoMathias {
         grid-area: fotoMathias;
         height: auto;
-        width: fit-content;
-        margin: 0 auto;
+        align-self: start;
+        justify-self: end;
+
+        &Png {
+            margin-top: 5%;
+        }
     }
 
     &SobreMathias {
         grid-area: sobreMathias;
         padding: 0 1%;
-        margin-top: 3%;
+        margin-bottom: 5%;
         }
 
     &FotoSonia {
         grid-area: fotoSonia;
         height: auto;
-        width: fit-content;
-        margin: 0 auto;
+        align-self: start;
+        justify-self: end;
+
+        &Png {
+            margin-top: 5%;
+        }
     }
 
     &SobreSonia {
         grid-area: sobreSonia;
         padding: 0 1%;
-        margin-top: 3%;        
+        margin-bottom: 5%;
     }
 
     &FotoFernando {
         grid-area: fotoFernando;
         height: auto;
-        width: fit-content;
-        margin: 0 auto;
+        align-self: start;
+        justify-self: end;
+
+        &Png {
+            margin-top: 5%;
+        }
     }
 
     &SobreFernando {
         grid-area: sobreFernando;
         padding: 0 1%;
-        margin-top: 3%;
+        margin-bottom: 5%;
     }
 }

@@ -19,28 +19,28 @@
     }
     
     &Vision {
-        margin-left: 5%;
+        margin-left: 45px;
         grid-area: vision;
         &Texto {   
-            margin: 15px 0 10px 15px;
+            margin: 15px 45px;
             grid-area: textoVision;
         }
     }
         
     &Mision {
-        margin-left: 5%;
+        margin-left: 45px;
         grid-area: mision;
         &Texto {
-            margin: 15px 0 10px 15px;
+            margin: 15px 45px;
             grid-area: textoMision;
         }
     }
         
     &Valores {
-        margin-left: 5%;
+        margin-left: 45px;
         grid-area: valores;
         &Texto {
-            margin: 15px 0 10px 15px;
+            margin: 15px 45px;
             grid-area: textoValores;
         }
     }

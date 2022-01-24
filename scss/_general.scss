@@ -11,25 +11,33 @@ body {
     background-color: bisque;
 }
 
-.formatoTitulos {
-    font-family: 'Baloo 2', cursive;
-    color: #6619FF;
-}
+// .formatoTitulos {
+//     font-family: 'Baloo 2', cursive;
+// }
 
 .titulos {
-    @extend .formatoTitulos;
+    // @extend .formatoTitulos;
         font-size: 4rem;
         text-align: center;
 }
 
 .subtitulos {
-    @extend .formatoTitulos;
+    // @extend .formatoTitulos;
     font-size: 2rem;
     color: rgb(153, 48, 48);
 }
 
+p {
+    font-size: 1.3rem;
+}
+
+li { 
+    font-size: 1.3rem;
+}
+
 a {
     text-decoration: none;
+    font-size: 1.3rem;
     color: black;
     font-weight: bold;
     

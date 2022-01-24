@@ -9,10 +9,6 @@ body {
   color: black;
   background-color: bisque; }
 
-.formatoTitulos, .titulos, .subtitulos {
-  font-family: 'Baloo 2', cursive;
-  color: #6619FF; }
-
 .titulos {
   font-size: 4rem;
   text-align: center; }
@@ -21,8 +17,15 @@ body {
   font-size: 2rem;
   color: #993030; }
 
+p {
+  font-size: 1.3rem; }
+
+li {
+  font-size: 1.3rem; }
+
 a {
   text-decoration: none;
+  font-size: 1.3rem;
   color: black;
   font-weight: bold; }
   a:hover {
@@ -39,15 +42,17 @@ a {
     transform: scale(1.2);
     border-radius: 0%; }
 
-.nav-item:hover {
-  transform: rotate(-5deg); }
+.nav-item {
+  font-size: 1.3rem; }
+  .nav-item:hover {
+    transform: rotate(-5deg); }
 
 .navbar {
   background-color: rgba(240, 229, 34, 0.664); }
 
 .homeGrid {
   display: grid;
-  grid-template-areas: "portada portada portada" "tituloHome tituloHome tituloHome" "subtituloPsico subtituloPsico ." "textoHome textoHome textoHome" "ubicacionCetecc ubicacionCetecc ." "mapaCetecc . .";
+  grid-template-areas: "portada portada portada" "tituloHome tituloHome tituloHome" "subtituloPsico subtituloPsico subtituloPsico" "textoHome textoHome textoHome" "ubicacionCetecc ubicacionCetecc ubicacionCetecc" "mapaCetecc mapaCetecc mapaCetecc";
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(6, auto);
   justify-items: strecht;
@@ -55,31 +60,38 @@ a {
 
 .homePortada {
   grid-area: portada;
-  width: 100%; }
+  width: 100%;
+  display: grid;
+  place-items: center; }
 
 .homeImg {
   align-self: center;
-  width: 100%;
-  height: 300px; }
+  width: 80%;
+  height: 200px; }
 
 .homeTitulo {
-  grid-area: tituloHome; }
+  grid-area: tituloHome;
+  margin: 5%; }
 
 .homeImportanciaPsico {
   grid-area: subtituloPsico;
-  margin: 0 0 0 1.5%; }
+  margin-left: 5%; }
   .homeImportanciaPsicoTexto {
     grid-area: textoHome;
-    margin: 0 0 0 1.5%; }
+    margin: 0 5% 0 5%; }
 
 .homeUbicacion {
   grid-area: ubicacionCetecc;
-  margin: 0 0 0 1.5%; }
+  margin: 0 5% 0 5%; }
 
 .homeMapa {
-  grid-area: mapaCetecc; }
+  grid-area: mapaCetecc;
+  display: grid;
+  place-items: center;
+  margin-bottom: 2%; }
   .homeMapa iframe {
-    margin: 3.5% 3.5%; }
+    width: 80%;
+    height: 35vh; }
 
 .nosotrosGrid {
   display: grid;
@@ -90,62 +102,73 @@ a {
   align-items: center; }
 
 .nosotrosTitulo {
-  grid-area: tituloNosotros; }
+  grid-area: tituloNosotros;
+  margin: 20px 10px; }
 
 .nosotrosFotoAna {
   grid-area: fotoAna;
   height: auto;
-  width: fit-content;
-  margin: 0 auto; }
+  align-self: start;
+  justify-self: end; }
+  .nosotrosFotoAnaPng {
+    margin-top: 5%; }
 
 .nosotrosSobreAna {
   grid-area: sobreAna;
   padding: 0 1%;
-  margin-top: 3%; }
+  margin-bottom: 5%; }
 
 .nosotrosFotoCarla {
   grid-area: fotoCarla;
   height: auto;
-  width: fit-content;
-  margin: 0 auto; }
+  align-self: start;
+  justify-self: end; }
+  .nosotrosFotoCarlaPng {
+    margin-top: 5%; }
 
 .nosotrosSobreCarla {
   grid-area: sobreCarla;
   padding: 0 1%;
-  margin-top: 3%; }
+  margin-bottom: 5%; }
 
 .nosotrosFotoMathias {
   grid-area: fotoMathias;
   height: auto;
-  width: fit-content;
-  margin: 0 auto; }
+  align-self: start;
+  justify-self: end; }
+  .nosotrosFotoMathiasPng {
+    margin-top: 5%; }
 
 .nosotrosSobreMathias {
   grid-area: sobreMathias;
   padding: 0 1%;
-  margin-top: 3%; }
+  margin-bottom: 5%; }
 
 .nosotrosFotoSonia {
   grid-area: fotoSonia;
   height: auto;
-  width: fit-content;
-  margin: 0 auto; }
+  align-self: start;
+  justify-self: end; }
+  .nosotrosFotoSoniaPng {
+    margin-top: 5%; }
 
 .nosotrosSobreSonia {
   grid-area: sobreSonia;
   padding: 0 1%;
-  margin-top: 3%; }
+  margin-bottom: 5%; }
 
 .nosotrosFotoFernando {
   grid-area: fotoFernando;
   height: auto;
-  width: fit-content;
-  margin: 0 auto; }
+  align-self: start;
+  justify-self: end; }
+  .nosotrosFotoFernandoPng {
+    margin-top: 5%; }
 
 .nosotrosSobreFernando {
   grid-area: sobreFernando;
   padding: 0 1%;
-  margin-top: 3%; }
+  margin-bottom: 5%; }
 
 .misionGrid {
   display: grid;
@@ -157,24 +180,24 @@ a {
   grid-area: objetivosCetecc; }
 
 .misionVision {
-  margin-left: 5%;
+  margin-left: 45px;
   grid-area: vision; }
   .misionVisionTexto {
-    margin: 15px 0 10px 15px;
+    margin: 15px 45px;
     grid-area: textoVision; }
 
 .misionMision {
-  margin-left: 5%;
+  margin-left: 45px;
   grid-area: mision; }
   .misionMisionTexto {
-    margin: 15px 0 10px 15px;
+    margin: 15px 45px;
     grid-area: textoMision; }
 
 .misionValores {
-  margin-left: 5%;
+  margin-left: 45px;
   grid-area: valores; }
   .misionValoresTexto {
-    margin: 15px 0 10px 15px;
+    margin: 15px 45px;
     grid-area: textoValores; }
 
 .serviciosGrid {
@@ -184,18 +207,20 @@ a {
 
 .serviciosTitulo {
   grid-area: tituloServicios;
-  margin-bottom: 2.5%; }
+  margin: 10px 25px 20px 25px; }
 
 .serviciosListado {
-  grid-area: listadoServicios; }
+  grid-area: listadoServicios;
+  margin: 15px 45px; }
 
 .serviciosSubtitulos {
   grid-area: subtituloServicios;
   margin-top: 2.5%;
-  margin-left: 1.5%; }
+  margin-left: 45px; }
 
 .serviciosPoblaciones {
-  grid-area: poblaciones; }
+  grid-area: poblaciones;
+  margin: 15px 45px; }
 
 .table th {
   text-align: center;
@@ -206,7 +231,7 @@ a {
   padding-left: 10px; }
 
 .contactoMapa {
-  margin: 2% 0 2% 2%; }
+  margin: 15px 50px; }
 
 .footer {
   border: black solid 2px;
@@ -233,9 +258,20 @@ a {
       transform: scale(1.2);
       border-radius: 50%; }
 
-@media screen and (max-width: 708px) {
-  body {
-    font-size: .80rem; }
+@media screen and (max-width: 800px) {
+  p {
+    font-size: 1.1rem; }
+  a {
+    font-size: 1.1rem; }
+  li {
+    font-size: 1.1rem; }
+  .homeGrid {
+    display: grid;
+    grid-template-areas: "portada" "tituloHome" "subtituloPsico" "textoHome" "ubicacionCetecc" "mapaCetecc";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    justify-items: strecht;
+    align-items: center; }
   .titulos {
     font-size: 3rem;
     line-height: 1;
@@ -247,33 +283,36 @@ a {
     width: 100px;
     height: 90px; }
   .homeImg {
-    height: 200px;
-    width: 100%; }
-  .nosotrosFotoAna img {
-    width: 135px;
-    height: 135px; }
+    height: 165px; }
+  .homeMapa {
+    margin-bottom: 2%; }
+  .nosotrosFotoAnaPng {
+    margin-left: 20px;
+    height: 155px;
+    width: 155px; }
   .nosotrosSobreAna {
-    margin-left: 1%; }
-  .nosotrosFotoCarla img {
-    width: 135px;
-    height: 135px; }
+    margin-left: 5%;
+    margin-right: 5%; }
+  .nosotrosFotoCarlaPng {
+    margin-left: 20px; }
   .nosotrosSobreCarla {
-    margin-left: 1%; }
-  .nosotrosFotoMathias img {
-    width: 135px;
-    height: 135px; }
+    margin-left: 5%;
+    margin-right: 5%; }
+  .nosotrosFotoMathiasPng {
+    margin-left: 20px; }
   .nosotrosSobreMathias {
-    margin-left: 1%; }
-  .nosotrosFotoSonia img {
-    width: 135px;
-    height: 135px; }
+    margin-left: 5%;
+    margin-right: 5%; }
+  .nosotrosFotoSoniaPng {
+    margin-left: 20px; }
   .nosotrosSobreSonia {
-    margin-left: 1%; }
-  .nosotrosFotoFernando img {
-    width: 135px;
-    height: 135px; }
+    margin-left: 5%;
+    margin-right: 5%; }
+  .nosotrosFotoFernandoPng {
+    margin-left: 20px; }
   .nosotrosSobreFernando {
-    margin-left: 1%; }
+    margin-left: 5%;
+    margin-right: 5%; }
   .serviciosGrid {
     display: grid;
     grid: "tituloServicios tituloServicios tituloServicios" auto "listadoServicios listadoServicios listadoServicios" auto "subtituloServicios subtituloServicios subtituloServicios" auto "poblaciones poblaciones poblaciones" auto / 1fr 1fr 1fr; }
@@ -287,73 +326,76 @@ a {
     margin-bottom: 1rem; } }
 
 @media screen and (max-width: 480px) {
-  body {
-    font-size: .70rem; }
+  p {
+    font-size: 1rem; }
+  a {
+    font-size: 1rem; }
+  li {
+    font-size: 1rem; }
   .titulos {
-    font-size: 2rem; }
+    font-size: 1.5rem; }
   .subtitulos {
     font-size: 1.35rem; }
   .logoCetecc {
     width: 85px;
     height: 76.5px; }
-  .homeGrid {
-    display: grid;
-    grid-template-areas: "portada" "tituloHome" "subtituloPsico" "textoHome" "ubicacionCetecc" "mapaCetecc";
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, auto);
-    justify-items: strecht;
-    align-items: center; }
   .homeImg {
-    height: 150px;
-    width: 100%; }
+    height: 150px; }
   .homeUbicacion {
     grid-area: ubicacionCetecc;
     margin: 15px 0.5%; }
     .homeUbicacion h2 {
       text-align: center; }
   .homeMapa {
-    grid-area: mapaCetecc; }
-    .homeMapa iframe {
-      margin: 3.5% 6.5%;
-      text-align: center; }
+    grid-area: mapaCetecc;
+    display: grid;
+    place-items: center;
+    margin-bottom: 2%; }
   .nosotrosGrid {
     display: grid;
     grid-template-areas: "tituloNosotros" "fotoAna" "sobreAna" "fotoCarla" "sobreCarla" "fotoMathias" "sobreMathias" "fotoSonia" "sobreSonia" "fotoFernando" "sobreFernando";
     justify-items: center;
     align-items: center; }
+  .nosotrosTitulo {
+    margin: 10px 5px; }
   .nosotrosFotoAna {
-    text-align: center; }
-    .nosotrosFotoAna img {
-      width: 110px;
-      height: 110px; }
+    align-self: center;
+    justify-self: center; }
+    .nosotrosFotoAnaPng {
+      margin: 0px;
+      margin-bottom: 10px; }
   .nosotrosSobreAna {
     text-align: left; }
   .nosotrosFotoCarla {
-    text-align: center; }
-    .nosotrosFotoCarla img {
-      width: 110px;
-      height: 110px; }
+    align-self: center;
+    justify-self: center; }
+    .nosotrosFotoCarlaPng {
+      margin: 0px;
+      margin-bottom: 10px; }
   .nosotrosSobreCarla {
     text-align: left; }
   .nosotrosFotoMathias {
-    text-align: center; }
-    .nosotrosFotoMathias img {
-      width: 110px;
-      height: 110px; }
+    align-self: center;
+    justify-self: center; }
+    .nosotrosFotoMathiasPng {
+      margin: 0px;
+      margin-bottom: 10px; }
   .nosotrosSobreMathias {
     text-align: left; }
   .nosotrosFotoSonia {
-    text-align: center; }
-    .nosotrosFotoSonia img {
-      width: 110px;
-      height: 110px; }
+    align-self: center;
+    justify-self: center; }
+    .nosotrosFotoSoniaPng {
+      margin: 0px;
+      margin-bottom: 10px; }
   .nosotrosSobreSonia {
     text-align: left; }
   .nosotrosFotoFernando {
-    text-align: center; }
-    .nosotrosFotoFernando img {
-      width: 110px;
-      height: 110px; }
+    align-self: center;
+    justify-self: center; }
+    .nosotrosFotoFernandoPng {
+      margin: 0px;
+      margin-bottom: 10px; }
   .nosotrosSobreFernando {
     text-align: left; }
   .misionGrid {
@@ -367,4 +409,6 @@ a {
       padding-top: 1rem; }
   .footerIconos img {
     height: 52px;
-    width: 55.5px; } }
+    width: 55.5px; }
+  .footer p {
+    font-size: 0.9rem; } }

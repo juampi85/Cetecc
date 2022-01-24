@@ -1,6 +1,34 @@
-@media screen and (max-width: 708px) {
+@media screen and (max-width: 800px) {
     body {
-        font-size: .80rem;
+        // font-size: .80rem;
+        // font-size: 80%;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    a {
+        font-size: 1.1rem;
+    }
+
+    li {
+        font-size: 1.1rem;
+    }
+
+    .homeGrid {
+        display: grid;
+        grid-template-areas: 
+        "portada"
+        "tituloHome"
+        "subtituloPsico"
+        "textoHome"
+        "ubicacionCetecc"
+        "mapaCetecc";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+        justify-items: strecht;
+        align-items: center;
     }
 
     .titulos {
@@ -20,64 +48,71 @@
     }
     
     .homeImg {
-        height:200px;
-        width: 100%;
+        height:165px;
     }
+
+    .homeMapa {
+        margin-bottom: 2%;
+    }    
+
+
 
     .nosotros {
         &FotoAna {
-            & img {
-                width: 135px;
-                height: 135px;
+            &Png {
+                margin-left: 20px;
+                height: 155px;
+                width: 155px;
             }
         }
         
         &SobreAna {
-            margin-left: 1%;
+            margin-left:5%;
+            margin-right: 5%;
         }
 
         &FotoCarla {
-            & img {
-                width: 135px;
-                height: 135px;
+            &Png {
+                margin-left: 20px;
             }
         }
 
         &SobreCarla {
-            margin-left: 1%;
+            margin-left:5%;
+            margin-right: 5%;
         }
 
         &FotoMathias {
-            & img {
-                width: 135px;
-                height: 135px;
+            &Png {
+                margin-left: 20px;
             }
         }
 
         &SobreMathias {
-        margin-left: 1%;
+            margin-left:5%;
+            margin-right: 5%;
         }
 
         &FotoSonia {
-            & img {
-                width: 135px;
-                height: 135px;
+            &Png {
+                margin-left: 20px;
             }
         }
 
         &SobreSonia {
-            margin-left: 1%;
+            margin-left:5%;
+            margin-right: 5%;
         }
 
         &FotoFernando {
-            & img {
-                width: 135px;
-                height: 135px;
+            &Png {
+                margin-left: 20px;
             }
         }
 
         &SobreFernando {
-            margin-left: 1%;
+            margin-left:5%;
+            margin-right: 5%;
         }
     }
 
@@ -111,12 +146,23 @@
 
 
 @media screen and (max-width: 480px) {
-    body {
-        font-size: .70rem;
-    }
+    // body {
+    //     font-size: 70%;
+    // }
     
+    p {
+        font-size: 1rem;
+    }
+
+   a {
+    font-size: 1rem;
+    }
+
+    li {
+        font-size: 1rem;
+    }
     .titulos {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .subtitulos {
@@ -128,24 +174,8 @@
         height: 76.5px;
     }
 
-    .homeGrid {
-        display: grid;
-        grid-template-areas: 
-        "portada"
-        "tituloHome"
-        "subtituloPsico"
-        "textoHome"
-        "ubicacionCetecc"
-        "mapaCetecc";
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, auto);
-        justify-items: strecht;
-        align-items: center;
-    }
-
     .homeImg {
         height:150px;
-        width: 100%;
     }
 
     .homeUbicacion {
@@ -159,11 +189,9 @@
     
     .homeMapa {
         grid-area: mapaCetecc;
-
-        & iframe {
-            margin: 3.5% 6.5%;
-            text-align: center;
-        }
+        display: grid;
+        place-items: center;
+        margin-bottom: 2%;
     }
 
     .nosotros {    
@@ -185,11 +213,18 @@
             align-items: center;
         }
 
+        &Titulo {
+            margin: 10px 5px;
+        }
+
+
         &FotoAna {
-            text-align: center;
-            & img {
-                width: 110px;
-                height: 110px;
+            align-self: center;
+            justify-self: center;
+
+            &Png {
+                margin: 0px;
+                margin-bottom: 10px;
             }
         }
                 
@@ -198,10 +233,12 @@
         }
     
         &FotoCarla {
-            text-align: center;
-            & img {
-                width: 110px;
-                height: 110px;
+            align-self: center;
+            justify-self: center;
+
+            &Png {
+                margin: 0px;
+                margin-bottom: 10px;
             }
         }
 
@@ -210,10 +247,12 @@
         }
     
         &FotoMathias {
-            text-align: center;
-            & img {
-                width: 110px;
-                height: 110px;
+            align-self: center;
+            justify-self: center;
+
+            &Png {
+                margin: 0px;
+                margin-bottom: 10px;
             }
         }
 
@@ -222,10 +261,12 @@
         }
         
         &FotoSonia {
-            text-align: center;
-            & img {
-                width: 110px;
-                height: 110px;
+            align-self: center;
+            justify-self: center;
+
+            &Png {
+                margin: 0px;
+                margin-bottom: 10px;
             }
         }
 
@@ -234,10 +275,12 @@
         }
 
         &FotoFernando {
-            text-align: center;
-            & img {
-                width: 110px;
-                height: 110px;
+            align-self: center;
+            justify-self: center;
+
+            &Png {
+                margin: 0px;
+                margin-bottom: 10px;
             }
         }
 
@@ -269,8 +312,15 @@
         }
     }
 
-    .footerIconos img {
+    .footer {
+        
+        &Iconos img {
         height: 52px;
         width: 55.5px;
+        }
+
+        & p {
+            font-size: 0.9rem;
+        }
     }
 }
